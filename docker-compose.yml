@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  productservice:
+   image: ${DOCKER_REGISTRY-}productservice
+   build:
+    context: .
+    dockerfile: ProductService/Dockerfile
+
+
+  userservice:
+   image: ${DOCKER_REGISTRY-}userservice
+   build:
+    context: .
+    dockerfile: UserService/Dockerfile
+
+
+  gatewayapi:
+    image: ${DOCKER_REGISTRY-}gatewayapi
+    build:
+      context: .
+      dockerfile: GatewayApi/Dockerfile
