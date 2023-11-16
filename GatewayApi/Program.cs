@@ -39,9 +39,9 @@ app.UseHttpsRedirection();
 
 app.UseCors("CORSPolicy");
 
-await app.UseOcelot();
-
 app.UseAuthorization();
+
+await app.UseOcelot();
 
 app.MapControllers();
 
