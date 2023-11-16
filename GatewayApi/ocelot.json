@@ -1,9 +1,9 @@
 {
-  "ReRoutes": [
+  "Routes": [
     {
-      "UpstreamPathTemplate": "/gateway/product",
+      "UpstreamPathTemplate": "/product/{x}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
-      "DownstreamPathTemplate": "/api/Product",
+      "DownstreamPathTemplate": "/{x}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -13,9 +13,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/product/{id}",
+      "UpstreamPathTemplate": "/product/{y}",
       "UpstreamHttpMethod": [ "Get", "Delete", "Put" ],
-      "DownstreamPathTemplate": "/api/Product/{id}",
+      "DownstreamPathTemplate": "/{y}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -25,9 +25,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/user",
+      "UpstreamPathTemplate": "/user/{x}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
-      "DownstreamPathTemplate": "/api/User",
+      "DownstreamPathTemplate": "/{x}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -37,9 +37,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/gateway/user/{id}",
+      "UpstreamPathTemplate": "/user/{y}",
       "UpstreamHttpMethod": [ "Get", "Delete", "Put" ],
-      "DownstreamPathTemplate": "/api/User/{id}",
+      "DownstreamPathTemplate": "/{y}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
